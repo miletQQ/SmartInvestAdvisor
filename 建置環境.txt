@@ -1,0 +1,29 @@
+# 建立環境
+conda create -n smartinvest python=3.11 -y
+conda activate smartinvest
+
+# 安裝常用科學套件
+conda install pandas numpy pyarrow -y
+pip install streamlit altair tqdm yfinance==0.2.37
+
+TA-Lib 0.5.1 安裝指令（Windows 11 + Anaconda）
+# 更新 conda 後，直接從 conda-forge 取 0.5.1（含 DLL）
+conda update -n base -c defaults conda -y
+conda config --add channels conda-forge
+conda config --set channel_priority flexible
+conda install ta-lib -y         # 0.5.1
+cd 
+pip／wheel 備援方案
+pip install --upgrade pip setuptools wheel
+# 0.4.28 Windows wheel 下載：
+pip install TA_Lib-0.4.28-cp311-cp311-win_amd64.whl
+
+在vscode終端機上
+pip install -r requirements.txt
+python.exe -m pip install --upgrade pip
+
+在vscode上
+1.按下 F1
+2.輸入並選擇：Python: Select Interpreter
+3.選擇：Anaconda3\envs\smartinvest 的路徑
+4.例如：Python 3.11 (smartinvest: conda)
